@@ -3,44 +3,255 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>2026-02 三大会 出欠</title>
+<title>三大会（門祖会／開導会／高祖会）</title>
 <style>
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Meiryo",sans-serif;margin:20px;line-height:1.5}
-h1{font-size:20px}
-table{width:100%;border-collapse:collapse;margin-top:15px}
-th,td{border-bottom:1px solid #ddd;padding:8px;text-align:left}
-th{background:#f5f5f5}
-.section{margin-top:30px}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Meiryo",sans-serif;margin:20px;line-height:1.5}
+  header{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  h1{font-size:20px;margin:0}
+  .nav a{margin-right:12px}
+  .muted{color:#666;font-size:12px}
+  .card{border:1px solid #ddd;border-radius:12px;padding:12px;margin:12px 0}
+  .big{font-size:16px;font-weight:700;margin:0 0 8px}
+  table{width:100%;border-collapse:collapse}
+  th,td{border-bottom:1px solid #eee;padding:8px;text-align:left}
+  th{background:#fafafa}
+  .w-han{min-width:110px}
+  .w-name{min-width:160px}
+  .w-s{min-width:110px}
+  code{background:#f6f6f6;padding:2px 6px;border-radius:6px}
 </style>
 </head>
 <body>
 
-<h1>2026年2月 三大会 出欠</h1>
-
-<div class="section">
-<table>
-<tr>
-<th>氏名</th>
-<th>門祖会(参/不)</th>
-<th>門祖会(将引)</th>
-<th>開導会(参/不)</th>
-<th>開導会(将引)</th>
-<th>高祖会(参/不)</th>
-<th>高祖会(将引)</th>
-</tr>
-<tr>
-<td>松浦 文昌</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
+<header>
+  <h1>三大会（門祖会／開導会／高祖会）</h1>
+  <div class="nav">
+    <a href="./index.html">トップへ</a>
+  </div>
+</header>
+<div class="muted">更新日：2026-02-15</div>
+<div class="muted">
+  入力ルール：参詣＝<code>参</code>/<code>不</code>、将引＝<code>予定</code>/<code>確認中</code>
 </div>
 
-<p><a href="./index.html">← トップへ戻る</a></p>
+<!-- 全体集計 -->
+<div class="card">
+  <div class="big">自動集計（このページ全体）</div>
+  <div id="summary"></div>
+</div>
+
+<!-- メイン表（いまは2026-02として運用開始。来月はこのcardごとコピペして見出しだけ2026-03にする） -->
+<div class="card">
+  <div class="big">2026-02（三大会）</div>
+  <div style="overflow:auto">
+    <table class="sandaie">
+      <thead>
+        <tr>
+          <th class="w-han">区分</th>
+          <th class="w-name">氏名</th>
+          <th class="w-s">門祖会（参/不）</th>
+          <th class="w-s">門祖会（将引）</th>
+          <th class="w-s">開導会（参/不）</th>
+          <th class="w-s">開導会（将引）</th>
+          <th class="w-s">高祖会（参/不）</th>
+          <th class="w-s">高祖会（将引）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 松浦班 -->
+        <tr><td>松浦班</td><td>松浦 文昌（班長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>髙田 雄一</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>大木 龍太郎</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>藤原 靖</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>藤原 治</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>萩原 賢祐</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>関口 誠</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>内山 翔太</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>松浦班</td><td>鶴見 清明</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+        <!-- 白木班 -->
+        <tr><td>白木班</td><td>白木 嘉範（班長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>岸本 征樹</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>大場 広志</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>菊池 征悟</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>小佐井 明人</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>武田 政美</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>高部 陽介</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>高部 恭史</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>白木班</td><td>藤山 佑一</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+        <!-- 藤原班 -->
+        <tr><td>藤原班</td><td>藤原 護（班長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>鈴木 慶光</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>久保 広孝</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>岩永 隆司</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>千明 英樹</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>山本 大嗣</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>岩井迫 辰彦</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>藤原班</td><td>佐野 憲弘</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+        <!-- 森田班 -->
+        <tr><td>森田班</td><td>森田 和俊（班長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>森田班</td><td>飯岡 一太</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>森田班</td><td>本田 剛四郎</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>森田班</td><td>八幡 義孝</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>森田班</td><td>那須 正康</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>森田班</td><td>前田 貴哉</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>森田班</td><td>前屋敷 翔次郎</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+        <!-- 古川班 -->
+        <tr><td>古川班</td><td>古川 智貴（班長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>古川班</td><td>佐藤 公一</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>古川班</td><td>田上 耕太</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>古川班</td><td>河野 裕太</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>古川班</td><td>木村 純</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>古川班</td><td>長島 剛太</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+        <!-- 鎌田班 -->
+        <tr><td>鎌田班</td><td>鎌田 茂郎（班長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>鎌田班</td><td>小林 英二</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>鎌田班</td><td>佐々木 誠一</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>鎌田班</td><td>三野 恒一</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>鎌田班</td><td>清水 洋昭</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>鎌田班</td><td>中川 猛</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+        <!-- 幹部（班外） -->
+        <tr><td>幹部（班外）</td><td>東 大佑（幹事長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>幹部（班外）</td><td>内山 晶稀（副幹事長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>幹部（班外）</td><td>石井 克典（副幹事長）</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 区分別集計（参/不のみ） -->
+<div class="card">
+  <div class="big">区分別集計（参/不のみ）</div>
+  <div style="overflow:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>区分</th>
+          <th>門祖会 参</th><th>門祖会 不</th>
+          <th>開導会 参</th><th>開導会 不</th>
+          <th>高祖会 参</th><th>高祖会 不</th>
+        </tr>
+      </thead>
+      <tbody id="byGroup"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+function norm(s){ return (s||"").replace(/\s+/g,""); }
+function inc(o,k){ o[k]=(o[k]||0)+1; }
+
+function yn(v){
+  v = norm(v);
+  if(v==="参") return "yes";
+  if(v==="不") return "no";
+  return "blank";
+}
+function plan(v){
+  v = norm(v);
+  if(v==="予定") return "a";
+  if(v==="確認中") return "b";
+  return "blank";
+}
+
+function run(){
+  // 1ページ内のすべての table.sandaie（将来、月カードを増やしてもOK）
+  const tables = Array.from(document.querySelectorAll("table.sandaie"));
+
+  // 区分別（ページ全体で合算）
+  const groups = {};
+  // 全体合計（ページ全体で合算）
+  const total = {
+    ms_yes:0, ms_no:0, ms_blank:0, ms_plan:0, ms_kak:0, ms_pblank:0,
+    kd_yes:0, kd_no:0, kd_blank:0, kd_plan:0, kd_kak:0, kd_pblank:0,
+    ks_yes:0, ks_no:0, ks_blank:0, ks_plan:0, ks_kak:0, ks_pblank:0,
+    total_rows:0
+  };
+
+  for(const table of tables){
+    const rows = Array.from(table.querySelectorAll("tbody tr"));
+    for(const tr of rows){
+      const tds = tr.querySelectorAll("td");
+      if(tds.length < 8) continue;
+
+      const gname = norm(tds[0].textContent);
+      if(!groups[gname]) groups[gname] = {
+        ms_yes:0, ms_no:0, ms_blank:0, ms_plan:0, ms_kak:0, ms_pblank:0,
+        kd_yes:0, kd_no:0, kd_blank:0, kd_plan:0, kd_kak:0, kd_pblank:0,
+        ks_yes:0, ks_no:0, ks_blank:0, ks_plan:0, ks_kak:0, ks_pblank:0,
+        total_rows:0
+      };
+
+      groups[gname].total_rows++; total.total_rows++;
+
+      // 門祖会
+      const a1 = yn(tds[2].textContent);
+      if(a1==="yes"){ inc(groups[gname],"ms_yes"); inc(total,"ms_yes"); }
+      else if(a1==="no"){ inc(groups[gname],"ms_no"); inc(total,"ms_no"); }
+      else { inc(groups[gname],"ms_blank"); inc(total,"ms_blank"); }
+
+      const a2 = plan(tds[3].textContent);
+      if(a2==="a"){ inc(groups[gname],"ms_plan"); inc(total,"ms_plan"); }
+      else if(a2==="b"){ inc(groups[gname],"ms_kak"); inc(total,"ms_kak"); }
+      else { inc(groups[gname],"ms_pblank"); inc(total,"ms_pblank"); }
+
+      // 開導会
+      const b1 = yn(tds[4].textContent);
+      if(b1==="yes"){ inc(groups[gname],"kd_yes"); inc(total,"kd_yes"); }
+      else if(b1==="no"){ inc(groups[gname],"kd_no"); inc(total,"kd_no"); }
+      else { inc(groups[gname],"kd_blank"); inc(total,"kd_blank"); }
+
+      const b2 = plan(tds[5].textContent);
+      if(b2==="a"){ inc(groups[gname],"kd_plan"); inc(total,"kd_plan"); }
+      else if(b2==="b"){ inc(groups[gname],"kd_kak"); inc(total,"kd_kak"); }
+      else { inc(groups[gname],"kd_pblank"); inc(total,"kd_pblank"); }
+
+      // 高祖会
+      const c1 = yn(tds[6].textContent);
+      if(c1==="yes"){ inc(groups[gname],"ks_yes"); inc(total,"ks_yes"); }
+      else if(c1==="no"){ inc(groups[gname],"ks_no"); inc(total,"ks_no"); }
+      else { inc(groups[gname],"ks_blank"); inc(total,"ks_blank"); }
+
+      const c2 = plan(tds[7].textContent);
+      if(c2==="a"){ inc(groups[gname],"ks_plan"); inc(total,"ks_plan"); }
+      else if(c2==="b"){ inc(groups[gname],"ks_kak"); inc(total,"ks_kak"); }
+      else { inc(groups[gname],"ks_pblank"); inc(total,"ks_pblank"); }
+    }
+  }
+
+  // 全体集計（未入力・将引含む）
+  const s = document.getElementById("summary");
+  if(s){
+    s.innerHTML = `
+      <div>対象人数：<b>${total.total_rows}</b></div>
+      <div>門祖会：参 <b>${total.ms_yes}</b> ／ 不 <b>${total.ms_no}</b> ／ 未入力 <b>${total.ms_blank}</b> ｜ 将引：予定 <b>${total.ms_plan}</b> ／ 確認中 <b>${total.ms_kak}</b> ／ 未入力 <b>${total.ms_pblank}</b></div>
+      <div>開導会：参 <b>${total.kd_yes}</b> ／ 不 <b>${total.kd_no}</b> ／ 未入力 <b>${total.kd_blank}</b> ｜ 将引：予定 <b>${total.kd_plan}</b> ／ 確認中 <b>${total.kd_kak}</b> ／ 未入力 <b>${total.kd_pblank}</b></div>
+      <div>高祖会：参 <b>${total.ks_yes}</b> ／ 不 <b>${total.ks_no}</b> ／ 未入力 <b>${total.ks_blank}</b> ｜ 将引：予定 <b>${total.ks_plan}</b> ／ 確認中 <b>${total.ks_kak}</b> ／ 未入力 <b>${total.ks_pblank}</b></div>
+    `;
+  }
+
+  // 区分別（参/不のみ）
+  const out = document.getElementById("byGroup");
+  if(out){
+    const names = Object.keys(groups);
+    out.innerHTML = names.map(name=>{
+      const g = groups[name];
+      return `<tr>
+        <td>${name}</td>
+        <td>${g.ms_yes}</td><td>${g.ms_no}</td>
+        <td>${g.kd_yes}</td><td>${g.kd_no}</td>
+        <td>${g.ks_yes}</td><td>${g.ks_no}</td>
+      </tr>`;
+    }).join("");
+  }
+}
+document.addEventListener("DOMContentLoaded", run);
+</script>
 
 </body>
 </html>
