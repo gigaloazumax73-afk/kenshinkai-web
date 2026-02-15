@@ -34,9 +34,7 @@
   入力ルール：御講 参詣＝<code>参</code>/<code>不</code>、将引＝<code>予定</code>/<code>確認中</code> ／ 口唱会・お助行＝<code>参</code>/<code>不</code>
 </div>
 
-<!-- =========================
-  松浦班
-========================= -->
+<!-- 松浦班 -->
 <div class="card">
   <div class="big">松浦班</div>
   <table>
@@ -63,9 +61,7 @@
   </table>
 </div>
 
-<!-- =========================
-  白木班
-========================= -->
+<!-- 白木班 -->
 <div class="card">
   <div class="big">白木班</div>
   <table>
@@ -92,9 +88,7 @@
   </table>
 </div>
 
-<!-- =========================
-  藤原班
-========================= -->
+<!-- 藤原班 -->
 <div class="card">
   <div class="big">藤原班</div>
   <table>
@@ -120,9 +114,7 @@
   </table>
 </div>
 
-<!-- =========================
-  森田班
-========================= -->
+<!-- 森田班 -->
 <div class="card">
   <div class="big">森田班</div>
   <table>
@@ -147,9 +139,7 @@
   </table>
 </div>
 
-<!-- =========================
-  古川班
-========================= -->
+<!-- 古川班 -->
 <div class="card">
   <div class="big">古川班</div>
   <table>
@@ -173,9 +163,7 @@
   </table>
 </div>
 
-<!-- =========================
-  鎌田班
-========================= -->
+<!-- 鎌田班 -->
 <div class="card">
   <div class="big">鎌田班</div>
   <table>
@@ -199,9 +187,7 @@
   </table>
 </div>
 
-<!-- =========================
-  幹部（班外） ※カウント対象
-========================= -->
+<!-- 幹部（班外）※カウント対象 -->
 <div class="card">
   <div class="big">幹部（班外）</div>
   <table>
@@ -222,23 +208,23 @@
   </table>
 </div>
 
-<!-- ▼ 自動集計（表示枠） -->
+<!-- 自動集計（全体） -->
 <div class="card">
   <div class="big">自動集計（このページ全体）</div>
   <div id="summary"></div>
 </div>
 
+<!-- 班別集計（参/不のみ） -->
 <div class="card">
-  <div class="big">班別集計</div>
+  <div class="big">班別集計（参/不のみ）</div>
   <div style="overflow:auto">
     <table>
       <thead>
         <tr>
           <th>区分</th>
-          <th>御講 参</th><th>御講 不</th><th>御講 未入力</th>
-          <th>将引 予定</th><th>将引 確認中</th><th>将引 未入力</th>
-          <th>口唱会 参</th><th>口唱会 不</th><th>口唱会 未入力</th>
-          <th>お助行 参</th><th>お助行 不</th><th>お助行 未入力</th>
+          <th>御講 参</th><th>御講 不</th>
+          <th>口唱会 参</th><th>口唱会 不</th>
+          <th>お助行 参</th><th>お助行 不</th>
         </tr>
       </thead>
       <tbody id="byGroup"></tbody>
@@ -343,10 +329,9 @@ function run(){
       const g = groups[name];
       return `<tr>
         <td>${name}</td>
-        <td>${g.gokou_yes}</td><td>${g.gokou_no}</td><td>${g.gokou_blank}</td>
-        <td>${g.syouin_yotei}</td><td>${g.syouin_kakunin}</td><td>${g.syouin_blank}</td>
-        <td>${g.koshokai_yes}</td><td>${g.koshokai_no}</td><td>${g.koshokai_blank}</td>
-        <td>${g.jogyou_yes}</td><td>${g.jogyou_no}</td><td>${g.jogyou_blank}</td>
+        <td>${g.gokou_yes}</td><td>${g.gokou_no}</td>
+        <td>${g.koshokai_yes}</td><td>${g.koshokai_no}</td>
+        <td>${g.jogyou_yes}</td><td>${g.jogyou_no}</td>
       </tr>`;
     }).join("");
   }
